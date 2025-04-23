@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TESSERACT</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@1,400&display=swap" rel="stylesheet" />
+  <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-myeongjo.css" rel="stylesheet" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: black;
+      font-family: 'Nanum Myeongjo', serif;
+      color: #DAFDFF;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 100px;
+      backdrop-filter: blur(12px);
+      background: rgba(255, 255, 255, 0.05);
+      z-index: 1000;
+    }
+
+    nav a {
+      color: #DAFDFF;
+      text-decoration: none;
+      font-size: 14px;
+      font-style: italic;
+      text-transform: none;
+      white-space: nowrap;
+      transition: all 0.2s ease-in-out;
+    }
+
+    nav a:hover {
+      text-shadow: 0 0 6px rgba(218, 253, 255, 0.6);
+    }
+
+    .section {
+      width: 100%;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .full-image {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .text-overlay {
+      position: absolute;
+      top: 60px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      max-width: 800px;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .quote {
+      font-family: 'Bodoni Moda', serif;
+      font-style: italic;
+      font-size: 18px;
+      color: #DAFDFF;
+      margin-bottom: 20px;
+      text-shadow: 0 0 8px rgba(218, 253, 255, 0.4);
+    }
+
+    .description {
+      font-size: 18px;
+      line-height: 1.8;
+      white-space: pre-line;
+      text-shadow: 0 0 8px rgba(218, 253, 255, 0.3);
+    }
+
+    .tesseract-title {
+      font-family: 'Bodoni Moda', serif;
+      font-style: italic;
+      font-size: 18px;
+      color: #86F5FF;
+      text-shadow: 0 0 8px rgba(134, 245, 255, 0.4);
+      margin-bottom: 60px;
+      line-height: 1.6;
+    }
+
+    .tesseract-description {
+      font-family: 'Nanum Myeongjo', serif;
+      font-size: 18px;
+      color: white;
+      line-height: 1.9;
+      white-space: pre-line;
+    }
+
+    .fixed-top-text {
+      position: absolute;
+      top: 15%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      max-width: 800px;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .bodoni-highlight {
+      font-family: 'Bodoni Moda', serif;
+      font-style: italic;
+      font-size: 18px;
+      color: #86F5FF;
+      text-shadow: 0 0 8px rgba(134, 245, 255, 0.4);
+      line-height: 1.6;
+      margin-bottom: 20px;
+      white-space: pre-line;
+      text-align: center;
+    }
+
+    .triplet-wrapper {
+      position: absolute;
+      top: 12%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 72%;
+      max-width: 1200px;
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      text-align: center;
+    }
+
+    .triplet {
+      flex: 1;
+      padding: 0 10px 10px 10px;
+    }
+
+    .triplet .subtitle {
+      font-family: 'Bodoni Moda', serif;
+      font-size: 18px;
+      font-style: italic;
+      color: #86F5FF;
+      text-shadow: 0 0 6px rgba(134, 245, 255, 0.4);
+      margin-bottom: 15px;
+    }
+
+    .triplet .subtext {
+      margin-top: 16px;
+      font-family: 'Nanum Myeongjo', serif;
+      font-size: 15px;
+      line-height: 1.8;
+      color: white;
+      white-space: pre-line;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="#about">About Tesseract</a>
+    <a href="#map">Travel Map</a>
+    <a href="#message">Message Service</a>
+  </nav>
+
+  <!-- 배경 1 -->
+  <div class="section">
+    <img src="배경1.png" alt="배경1" class="full-image" />
+  </div>
+
+  <!-- 배경 2 -->
+  <div class="section">
+    <img src="배경 2.png" alt="배경2" class="full-image" />
+    <div class="text-overlay">
+      <div class="quote">“The only things that can transcend time and space are gravity and love.”</div>
+      <div class="description">
+시공간을 초월할 수 있는 것은 중력과 사랑 뿐입니다.
+미래의 메시지 전달 서비스 Tesseract에서는 과거로 돌아가 사랑하는 이에게 메세지를 전달할 수 있도록 돕습니다.
+      </div>
+    </div>
+  </div>
+
+  <!-- 배경 3 -->
+  <div class="section">
+    <img src="배경 3.png" alt="배경3" class="full-image" />
+    <div class="text-overlay">
+      <div class="tesseract-title">
+        The Tesseract:<br />
+        Gateway to Transcending Time and Space
+      </div>
+      <div class="tesseract-description">
+여러분은 만날 수 없는 사람에게 사랑한다는 말을 전하고 싶었던 적이 있으신가요?
+
+아인슈타인의 상대성 이론에 따르면 시간과 공간은 서로 융합되어 절대적인 독립성을 갖지 못합니다.메세지 전달 서비스 Tesseract는 이러한 상대성 이론을 기반해 웜홀 ‘Kerrway’ 생성하고 그 안에 5차원 공간을 만들었습니다. 이 공간을 통해 당신이 원하는 시점의 과거 혹은 미래로 자유롭게 이동할 수 있습니다.Tesseract에서는 시간과 공간을 초월하여 사랑하는 이에게 메시지를 전달할 수 있는 특별한 경험을 제공합니다.
+
+중력과 사랑만이 시공간을 넘나들 수 있다는 믿음 아래,
+Tesseract가 당신의 시간을 넘은 메세지 전달을 도와드리겠습니다.
+      </div>
+    </div>
+  </div>
+
+  <!-- 배경 4 -->
+  <div class="section">
+    <img src="배경 4.png" alt="배경4" class="full-image" />
+    <div class="fixed-top-text">
+      <div class="tesseract-title">
+        The Mechanism of<br />
+        the Tesseract Enabling Time Travel
+      </div>
+      <div class="tesseract-description">
+Tesseract는 4차원 초입방체로, 우리에게 익숙한 3차원 공간을 넘어서는 개념입니다. 
+3차원 공간에서 입방체가 6개의 면으로 구성된 것처럼, 4차원 공간에서의 입방체인 Tesseract는 8개의 3차원 입방체로 구성됩니다. 이러한 개념을 통해 Tesseract는 
+시공간을 초월할 수 있게 됩니다.
+      </div>
+    </div>
+  </div>
+
+  <!-- 배경 5 -->
+  <div class="section">
+    <img src="배경 5.png" alt="배경5" class="full-image" />
+    <div class="triplet-wrapper">
+      <div class="triplet">
+        <div class="subtitle">4D Space and Time Travel</div>
+        <div class="subtext">우리는 보통 길이, 너비, 높이의 3차원 공간 속에서 살아가지만, Tesseract는 이 세 차원에 더해 시간이라는 네 번째 차원을 포함합니다. 이 네 번째 차원을 통해 우리는 시간을 초월한 여행을 떠날 수 있습니다. Tesseract의 각 면이 다른 시간대를 연결하는 문이 되어, 특정 시간대에 위치한 사람과 소통할 수 있게 됩니다.</div>
+      </div>
+      <div class="triplet">
+        <div class="subtitle">Gravity and Curved Space</div>
+        <div class="subtext">아인슈타인의 일반 상대성 이론에 따르면, 중력은 공간을 휘게 만들고 빛조차도 중력의 경로를 따라 휘어집니다. 이러한 원리를 응용하여, 테서렉트 또한 중력의 힘을 이용해 시공간을 휘게 만듭니다. 테서렉트 내부에서는 시공간이 휘어져 서로 다른 시간대가 연결될 수 있으며 이를 통해 과거나 미래로의 시간 여행이 가능합니다.</div>
+      </div>
+      <div class="triplet">
+        <div class="subtitle">Quantum Entanglement and Instantaneous Connection</div>
+        <div class="subtext">양자 물리학의 원리 중 하나인 양자 얽힘은 두 개의 입자가 서로 멀리 떨어져 있어도 즉각적으로 영향을 주고받을 수 있다는 것을 설명합니다. 테서렉트는 이러한 양자 얽힘의 원리를 적용하여, 서로 다른 시간대에 있는 사람들 간의 즉각적인 소통을 가능하게 합니다. 이를 통해 과거나 미래의 사랑하는 사람에게 메시지를 전달할 수 있습니다.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 배경 6 + 회전하는 세로 문장 -->
+  <div class="section">
+    <img src="배경 6-2.jpg" alt="배경6" class="full-image" />
+    <div class="vertical-text-container">
+      <div class="vertical-text">당신의 메세지는 가르강튀아의 중심에서 테서렉트를 타고 다른 구속 브레인에 안착해 과거로 향한다.</div>
+    </div>
+  </div>
+
+  <style>
+    .vertical-text-container {
+      position: absolute;
+      top: -14.4em;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      pointer-events: none;
+    }
+
+    .vertical-text {
+      writing-mode: vertical-rl;
+      font-family: 'Nanum Myeongjo', serif;
+      font-size: 33px;
+      letter-spacing: 0.5px;
+      color: #DAFDFF;
+      text-shadow: 0 0 8px rgba(134, 245, 255, 0.4);
+      
+    }
+
+    
+  </style>
+
+
+  <!-- 배경 7 + 문장 2줄 -->
+  <div class="section">
+    <img src="배경 7-3.jpg" alt="배경7" class="full-image" />
+    <div class="text-overlay" style="top: 18em;">
+      <div class="tesseract-description" style="font-size: 18px;">
+        당신이 전송할 메시지는 블랙홀, 사건의 지평선, 웜홀을 거쳐 당신이 사랑하는 이에게 도착합니다. 서비스 테서렉트가 메세지를 전달하는 과정을 함께 느껴보세요.
+      </div>
+    </div>
+  </div>
+
+
+  
+
+
+  
+
+
+  <!-- 배경 8 및 편지지 구성 -->
+  <div class="section">
+    <img src="배경 8.png" alt="배경8" class="full-image" />
+    <div class="message-intro">
+      <div class="text">과거의 어떠한 순간으로 메세지를 보내보세요<br />
+      당신이 작성한 메세지는 모스부호로 변환되어 5차원 공간으로 전송됩니다.</div>
+      <div class="letter-wrapper">
+        <img src="편지지.png" alt="편지지" class="letter-image" />
+        <div class="letter-glow"></div>
+        <div class="click-text">Click here to Write</div>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .message-intro {
+      position: absolute;
+      top: 2%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 60px;
+    }
+
+    .message-intro .text {
+      font-family: 'Nanum Myeongjo', serif;
+      font-size: 19px;
+      color: #DAFDFF;
+      text-align: center;
+      line-height: 1.8;
+    }
+
+    .letter-wrapper {
+      position: relative;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    .letter-image {
+      width: 20%;
+      max-width: none;
+      height: auto;
+      display: block;
+      position: relative;
+      z-index: 2;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .letter-wrapper:hover .letter-image {
+      transform: scale(1.05);
+    }
+
+    .letter-glow {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 70%;
+      height: 100%;
+      background: radial-gradient(circle, rgba(134,245,255,1) 0%, transparent 70%);
+      z-index: 1;
+      filter: blur(60px);
+    }
+
+    .click-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: 'Bodoni Moda', serif;
+      font-size: 22px;
+      color: white;
+      text-shadow: 0 0 6px rgba(134,245,255,1);
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+      z-index: 3;
+      pointer-events: none;
+    }
+
+    .letter-wrapper:hover .click-text {
+      opacity: 1;
+    }
+  </style>
+
+</body>
+</html>
